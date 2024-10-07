@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dúvidas Frequentes - Protege Suarão</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adicionei algumas melhorias de estilo no CSS inline */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .faq-section {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #025123;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .bottom-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #025123;
+            color: #fff;
+        }
+
+        .bottom-container p {
+            margin: 0;
+        }
+
+        a {
+            color: #025123;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Dúvidas Frequentes</h1>
+
+        <div class="faq-section" onclick="toggleAnswer(1)">
+            <div class="faq-question">
+                O que é o Protege Suarão?
+            </div>
+            <div class="faq-answer" id="faq1">
+                O Protege Suarão é um serviço que oferece segurança e proteção para os moradores e visitantes do Balneário Itanhaém-SP, garantindo uma resposta rápida e eficiente em casos de emergências.
+            </div>
+        </div>
+
+        <div class="faq-section" onclick="toggleAnswer(2)">
+            <div class="faq-question">
+                Como posso acionar um chamado de emergência?
+            </div>
+            <div class="faq-answer" id="faq2">
+                Você pode acionar um chamado de emergência diretamente pelo nosso site, na seção "Chamados", ou através do nosso aplicativo móvel, disponível para Android e iOS.
+            </div>
+        </div>
+
+        <div class="faq-section" onclick="toggleAnswer(3)">
+            <div class="faq-question">
+                Quais são os tipos de cobertura oferecidos?
+            </div>
+            <div class="faq-answer" id="faq3">
+                Oferecemos cobertura para emergências técnicas, administrativas, médicas, entre outras. Consulte a seção "Coberturas" no nosso site para mais detalhes.
+            </div>
+        </div>
+
+        <div class="faq-section" onclick="toggleAnswer(4)">
+            <div class="faq-question">
+                Como faço para atualizar meus dados cadastrais?
+            </div>
+            <div class="faq-answer" id="faq4">
+                Para atualizar seus dados cadastrais, acesse a seção "Meu Perfil" no nosso site ou aplicativo, faça login e edite suas informações.
+            </div>
+        </div>
+
+        <div class="faq-section" onclick="toggleAnswer(5)">
+            <div class="faq-question">
+                Quem pode utilizar os serviços do Protege Suarão?
+            </div>
+            <div class="faq-answer" id="faq5">
+                Todos os moradores e visitantes do Balneário Itanhaém-SP podem utilizar os serviços do Protege Suarão. É necessário realizar um cadastro prévio para acessar todas as funcionalidades.
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <p class="copyright">© 2024 Protege Suarão.</p>
+    </div>
+
+    <script>
+        function toggleAnswer(faqNumber) {
+            var answer = document.getElementById('faq' + faqNumber);
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

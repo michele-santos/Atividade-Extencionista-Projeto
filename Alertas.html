@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .faq-section {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #025123;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .bottom-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #025123;
+            color: #fff;
+        }
+
+        .bottom-container p {
+            margin: 0;
+        }
+
+        a {
+            color: #025123;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+    <title>Alertas</title>
+</head>
+<body>
+    <li><a href="./index.html">INÍCIO</a></li>
+    <form id="form-alerta">
+        <h2>Criar Novo Alerta</h2>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+        
+        <label for="nivel">Nível de Alerta:</label>
+        <select id="nivel" name="nivel">
+            <option value="alto">Alto</option>
+            <option value="medio">Médio</option>
+            <option value="baixo">Baixo</option>
+        </select>
+    </section>
+    <button class="botao-acao">Relatar Incidente</button>
+
+   <section>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h2>Lista de Alertas</h2>
+    <table id="tabela-alertas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Nível</th>
+            </tr>
+        </thead>
+        <tbody>
+          <script>
+            if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    console.log("Latitude: " + lat + ", Longitude: " + lon);
+  });
+} else {
+  console.log("Geolocalização não é suportada pelo navegador.");
+}
+
+            document.getElementById('form-alerta').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const titulo = document.getElementById('titulo').value;
+                const descricao = document.getElementById('descricao').value;
+                const nivel = document.getElementById('nivel').value;
+                const data = new Date().toLocaleDateString();
+            
+                const tabelaAlertas = document.getElementById('tabela-alertas').getElementsByTagName('tbody')[0];
+                const novaLinha = tabelaAlertas.insertRow();
+            
+                const cellId = novaLinha.insertCell(0);
+                const cellTitulo = novaLinha.insertCell(1);
+                const cellDescricao = novaLinha.insertCell(2);
+                const cellData = novaLinha.insertCell(3);
+                const cellNivel = novaLinha.insertCell(4);
+            
+                cellId.innerHTML = tabelaAlertas.rows.length;
+                cellTitulo.innerHTML = titulo;
+                cellDescricao.innerHTML = descricao;
+                cellData.innerHTML = data;
+                cellNivel.innerHTML = nivel;
+            
+                document.getElementById('form-alerta').reset();
+            });
+            </script>
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="bottom-container">
+    <p class="copyright">© 2024   Protege Suarão.</p>
+</div>
+</body>
+</html>

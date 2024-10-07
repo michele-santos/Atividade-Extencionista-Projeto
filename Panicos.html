@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adicionei algumas melhorias de estilo no CSS inline */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .faq-section {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #025123;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .bottom-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #025123;
+            color: #fff;
+        }
+
+        .bottom-container p {
+            margin: 0;
+        }
+
+        a {
+            color: #025123;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+    <title>Panicos</title>
+</head>
+<body>
+    <li><a href="./index.html">INÍCIO</a></li>
+    <div class="panic-container">
+        
+        <h2>Em caso de emergência, clique no botão abaixo:</h2>
+        <button class="panic-button" onclick="enviarAlerta()">Enviar Alerta de Pânico</button>
+
+    </div>
+
+
+    <h2>O que fazer em caso de emergência</h2>
+
+    <ul>
+        <li>Mantenha a calma e tente não entrar em pânico.</li>
+        <li>Se possível, afaste-se da área de perigo.</li>
+        <li>Contate as autoridades locais imediatamente.</li>
+        <li>Forneça informações precisas sobre sua localização e a natureza da emergência.</li>
+    </ul>
+</div>
+
+
+<script>
+    const cors = require('cors');
+    app.use(cors());
+    async function enviarAlerta() {
+        navigator.geolocation.getCurrentPosition(
+    (position) => {
+        const { latitude, longitude } = position.coords;
+        enviarAlertaComLocalizacao(latitude, longitude);
+    },
+    (error) => {
+        alert('Erro ao obter a localização.');
+    }
+);
+}
+
+async function enviarAlertaComLocalizacao(latitude, longitude) {
+    try {
+        const response = await fetch('http://localhost:3000/api/alert', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: 'Alerta de pânico!',
+                location: `Latitude: ${latitude}, Longitude: ${longitude}`
+            })
+        });
+
+        if (response.ok) {
+            alert('Alerta de pânico enviado com sucesso!');
+        } else {
+            alert('Falha ao enviar o alerta de pânico.');
+        }
+    } catch (error) {
+        alert('Erro ao enviar o alerta de pânico.');
+    }
+}
+</script>
+
+
+<div class="bottom-container">
+    <p class="copyright">© 2024   Protege Suarão.</p>
+</div>
+</body>
+</html>

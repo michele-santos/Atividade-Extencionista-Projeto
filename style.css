@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+/* Aumentando o tamanho da fonte do corpo principal */
+body {
+    font-size: 18px;
+    
+}
+
+/* Aumentando o tamanho da fonte do menu de navegação */
+nav ul li a {
+    font-size: 40px; /* Aumenta a fonte dos itens do menu */
+    font-weight: bold; /* Deixa o menu mais destacado */
+}
+
+/* Aumentando o tamanho da fonte dos títulos */
+h1 {
+    font-size: 100px; /* Título principal maior */
+    font-weight: bold;
+    color: #07461ce2;
+}
+
+h2 {
+    font-size: 50px; /* Títulos secundários maiores */
+}
+
+h3 {
+    font-size: 50px; /* Títulos menores */
+}
+
+/* Ajustando o tamanho dos parágrafos */
+p { 
+    font-size: 50px; /* Aumentando o texto dos parágrafos */
+    line-height: 1.9; /* Aumentando o espaçamento entre linhas para melhor leitura */
+    
+}
+
+/* Aumentando o tamanho da legenda das imagens */
+figcaption {
+    font-size: 30px;
+    color: #073405; /* Cor mais suave para a legenda */
+}
+
+/* Aumentando o tamanho dos botões */
+button, .botao-acao {
+    font-size: 9px; /* Fonte maior para os botões */
+    padding: 12px 24px; /* Aumentando a área clicável dos botões */
+}
+
+
+  
+/* Cores principais */
+:root {
+    --verde: #07461ce2;
+    --bege: hsl(0, 0%, 100%);
+    --cinza-claro: #d7cece;
+    --branco: #07461ce2;
+}
+
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Torna o menu vertical em telas menores */
+        text-align: center;
+    }
+
+    .banner img {
+        width: 100%; /* Faz a imagem do banner ocupar 100% da largura */
+    }
+    
+    .botao-acao {
+        width:50%; /* Faz os botões ocuparem toda a largura em dispositivos móveis */
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+
+button {
+    background-color: #04410f; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+  }
+  
+p {
+        footer {
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #f1f1f1; /* Cor de fundo opcional */
+      }
+  }
+
+nav {
+    width: 100%;
+}
+
+ul {
+    display:inline-flex;
+    width:100%;
+    justify-content:space-evenly;
+}
+
+
+li {
+    list-style: none;
+    color: #0e3e15;
+    cursor:auto;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+li:hover {
+    color: #0c4413;
+}
+
+#img {
+    width: 150px;
+    height: auto;
+    border-radius:150%;
+    overflow: auto;
+}
+
+.site-header {
+    background-color: var(--verde-escuro);
+    padding: 20px;
+    text-align: center;
+}
+
+ #banner {
+    background-image: url("https://www.refugiosnointerior.com.br/sistema/_lib/file/img/lugar/2257/praia_do_suarao.webp");
+    background-position:50% 50%;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+       }
+
+#video {
+    background-image: url("PROTEGE SUARÃO.mp4");
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+#trailer-container {
+    background-position: cover;
+    width: 50%;
+    height: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Navegação */
+.navbar {
+    background-color: var(--cinza-escuro);
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1em;
+}
+
+.navbar ul li a {
+    color: var(--branco);
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* Estilo do Main */
+.intro {
+    background-color: var(--cinza-claro);
+    padding: 2em;
+    text-align: center;
+}
+
+.intro h2{
+    font-size: 20px;
+    margin-bottom: 0.5em;
+}
+
+.main-container {
+    padding: 2em;
+    background-color: var(--branco);
+}
+
+.we-change {
+    background-color: var(--cinza-claro);
+    padding: 2em;
+}
+
+.we-change h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.accrodion {
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.accrodion-title h4 {
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0.5em;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    margin: 0;
+}
+
+.accrodion-content {
+    display: inline-flex;
+    padding: 0.5em;
+    background-color: var(--bege);
+}
+
+.accrodion-title h4:hover {
+    background-color: var(--cinza-escuro);
+}
+
+.accrodion-content p {
+    margin: 0.5em 0;
+}
+
+/* Estilo do Footer */
+.bottom-container {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.bottom-container p {
+    margin: 0;
+}
+
+/* Botões */
+button {
+
+    background-color: var(--verde-escuro)
+    color#0c4413;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1m;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cinza-escuro);
+
+}
+.botao-acao {
+    background-color: hsla(95, 97%, 49%, 0.991);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .botao-acao:hover {
+    background-color: hsla(95, 97%, 49%, 0.991);
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f0;
+    color: #084a15;
+    font-size:20px; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width:800px;
+    margin: center;
+    padding: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #044424;
+    text-align: center;
+}
+
+.faq-section {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.faq-question {
+    font-weight: bold;
+    color: #025123;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.bottom-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #025123;
+    color: #fff;
+}
+
+.bottom-container p {
+    margin: 0;
+}
+
+a {
+    color: #025123;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

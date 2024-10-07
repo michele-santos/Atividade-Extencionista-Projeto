@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protege Suarão</title>
+    <link rel="stylesheet" href="./style.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        function toggleAnswer(faqNumber) {
+            var answer = document.getElementById('faq' + faqNumber);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="logo" src="C:\Users\m29ss\Local\OneDrive\Protege-Suarão\.logo.suarão.jpg" alt="Logo Suarão" />
+
+    <nav>
+        <ul>
+            <li><a href="C:\Users\m29ss\Local\OneDrive\Protege-Suarão\index.html"><i class="fas fa-home"></i>INÍCIO</a></li>
+            <li><a href="https://example.com/Chamados.html"><i class="fas fa-phone-alt"></i>CHAMADOS</a></li>
+            <li><a href="https://example.com/Panicos.html"><i class="fas fa-exclamation-circle"></i>PÂNICO</a></li>
+            <li><a href="https://example.com/Alertas.html"><i class="fas fa-bell"></i>ALERTAS</a></li>
+            <li><a href="Contatos.html"><i class="fas fa-address-book"></i>CONTATOS</a></li>
+            <li><a href="https://example.com/Duvidas_Frequentes.html"><i class="fas fa-question-circle"></i>DÚVIDAS FREQUENTES</a></li>
+            <li><a href="https://example.com/Contatos.html"><i class="fas fa-address-book"></i>CONTATOS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section>
+            <h1>Bem-vindo</h1>
+            <p>
+                Protege Suarão é um aplicativo de segurança desenvolvido para o bairro Suarão Itanhaém-SP.    
+                O objetivo do app é promover a segurança da comunidade.
+                Fornecendo funcionalidades que permitem aos moradores reportar incidentes.
+                Acompanhar alertas de segurança em tempo real e se conectar com autoridades locais.
+            </p>
+        </section>
+        <figure>
+            <img id="banner" src="Suarao (1).JPG" alt="Vista da praia do Suarão">
+            <figcaption>Vista da praia do Suarão, Itanhaém-SP</figcaption>
+        </figure>
+        
+        <section>
+            <h2>Assista ao trailer do Protege Suarão</h2>
+            <div id="trailer-container">
+                <video controls>
+                    <source src="PROTEGE SUARÃO.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos em HTML5.
+                </video>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-messaging.js"></script>
+    
+    <div class="bottom-container">
+        <p>© 2024 Protege Suarão.</p>
+    </div>
+</body>
+</html>

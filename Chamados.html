@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chamados</title>
+</head>
+<body>
+    <li><a href="./index.html">INÍCIO</a></li>
+    <h2>Criar Novo Chamado</h2>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="descricao">Descrição do Problema:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade" name="prioridade">
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+        </select>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="tecnico">Técnico</option>
+            <option value="administrativo">Administrativo</option>
+        </select>
+
+        <label for="anexo">Anexar Arquivo:</label>
+        <input type="file" id="anexo" name="anexo">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h2>Lista de Chamados</h2>
+    <table id="tabela-chamados">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Prioridade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Problema no Sistema de Alarme</td>
+                <td>O sistema de alarme não está funcionando corretamente durante a noite.</td>
+                <td>2024-07-23</td>
+                <td>Em andamento</td>
+                <td>Alta</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Vazamento no Banheiro</td>
+                <td>Há um vazamento contínuo no banheiro da área administrativa.</td>
+                <td>2024-07-22</td>
+                <td>Resolvido</td>
+                <td>Média</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bottom-container">
+        <p class="copyright">© 2024 Protege Suarão.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+src/
+├── components/
+│   ├── Header.js
+│   ├── Footer.js
+│   └── VideoSection.js
+├── App.js
+├── store.js
+└── index.js
